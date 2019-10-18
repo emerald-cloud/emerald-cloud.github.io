@@ -1,17 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="app" dark>
+    <v-app-bar dark fixed flat hide-on-scroll color="transparent">
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-toolbar-title>취운화</v-toolbar-title>
+        <v-spacer />
+        <v-btn icon><v-icon>mdi-magnify</v-icon></v-btn>
+    </v-app-bar>
+
+    <abouts />
+    <v-spacer />
+    <slides />
+    <v-spacer />
+    <orders />
+
+    <v-footer absolute padless>
+        <v-card flat tile width="100%">
+            <v-card-title>(c) 취운화</v-card-title>
+            <v-card-text>since 2019</v-card-text>
+
+
+        </v-card>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import abouts from './components/Abouts'
+import slides from './components/Slides'
+import orders from './components/Orders'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    abouts,
+    slides,
+    orders,
+  },
+  data() {
+    return {
+      
+    }
   }
 }
 </script>
